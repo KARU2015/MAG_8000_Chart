@@ -28,45 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.ctMAG8000 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dateiLadenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.werteEinblendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartZurücksetzenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateiLadenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ctMAG8000)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ctMAG8000
             // 
-            chartArea5.AxisX.MinorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea5.AxisX.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea5.AxisX.MinorTickMark.LineColor = System.Drawing.Color.Silver;
-            chartArea5.CursorX.IsUserEnabled = true;
-            chartArea5.CursorX.IsUserSelectionEnabled = true;
-            chartArea5.Name = "ChartArea1";
-            this.ctMAG8000.ChartAreas.Add(chartArea5);
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea1.AxisX.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.Silver;
+            chartArea1.CursorX.IsUserEnabled = true;
+            chartArea1.CursorX.IsUserSelectionEnabled = true;
+            chartArea1.Name = "ChartArea1";
+            this.ctMAG8000.ChartAreas.Add(chartArea1);
             this.ctMAG8000.Cursor = System.Windows.Forms.Cursors.Cross;
             this.ctMAG8000.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Alignment = System.Drawing.StringAlignment.Center;
-            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend5.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend5.IsTextAutoFit = false;
-            legend5.Name = "MAG 8000";
-            legend5.TitleFont = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctMAG8000.Legends.Add(legend5);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "MAG 8000";
+            legend1.TitleFont = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctMAG8000.Legends.Add(legend1);
             this.ctMAG8000.Location = new System.Drawing.Point(0, 24);
             this.ctMAG8000.Name = "ctMAG8000";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "MAG 8000";
-            series5.Name = "MAG--8000##";
-            this.ctMAG8000.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "MAG 8000";
+            series1.Name = "MAG--8000##";
+            this.ctMAG8000.Series.Add(series1);
             this.ctMAG8000.Size = new System.Drawing.Size(1284, 738);
             this.ctMAG8000.TabIndex = 0;
             this.ctMAG8000.Text = "chart1";
@@ -75,6 +76,7 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
+            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
             // 
             // menuStrip1
             // 
@@ -88,6 +90,13 @@
             this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // dateiLadenToolStripMenuItem
+            // 
+            this.dateiLadenToolStripMenuItem.Name = "dateiLadenToolStripMenuItem";
+            this.dateiLadenToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.dateiLadenToolStripMenuItem.Text = "Datei laden";
+            this.dateiLadenToolStripMenuItem.Click += new System.EventHandler(this.dateiLadenToolStripMenuItem_Click);
             // 
             // werteEinblendenToolStripMenuItem
             // 
@@ -109,13 +118,6 @@
             this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.hilfeToolStripMenuItem.Text = "Hilfe";
             this.hilfeToolStripMenuItem.Click += new System.EventHandler(this.hilfeToolStripMenuItem_Click);
-            // 
-            // dateiLadenToolStripMenuItem
-            // 
-            this.dateiLadenToolStripMenuItem.Name = "dateiLadenToolStripMenuItem";
-            this.dateiLadenToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.dateiLadenToolStripMenuItem.Text = "Datei laden";
-            this.dateiLadenToolStripMenuItem.Click += new System.EventHandler(this.dateiLadenToolStripMenuItem_Click);
             // 
             // frMAG8000
             // 
