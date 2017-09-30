@@ -37,7 +37,9 @@
             this.dateiLadenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.werteEinblendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartZurücksetzenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.minMaxWerteAnzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hDurchschnittsausgabeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ctMAG8000)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +69,7 @@
             series2.Legend = "MAG 8000";
             series2.Name = "MAG--8000##";
             this.ctMAG8000.Series.Add(series2);
-            this.ctMAG8000.Size = new System.Drawing.Size(1284, 738);
+            this.ctMAG8000.Size = new System.Drawing.Size(1406, 839);
             this.ctMAG8000.TabIndex = 0;
             this.ctMAG8000.Text = "chart1";
             // 
@@ -81,10 +83,12 @@
             this.dateiLadenToolStripMenuItem,
             this.werteEinblendenToolStripMenuItem,
             this.chartZurücksetzenToolStripMenuItem,
+            this.minMaxWerteAnzeigenToolStripMenuItem,
+            this.hDurchschnittsausgabeToolStripMenuItem,
             this.hilfeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1406, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,6 +113,13 @@
             this.chartZurücksetzenToolStripMenuItem.Text = "Chart zurücksetzen";
             this.chartZurücksetzenToolStripMenuItem.Click += new System.EventHandler(this.btnChartReset_Click);
             // 
+            // minMaxWerteAnzeigenToolStripMenuItem
+            // 
+            this.minMaxWerteAnzeigenToolStripMenuItem.Name = "minMaxWerteAnzeigenToolStripMenuItem";
+            this.minMaxWerteAnzeigenToolStripMenuItem.Size = new System.Drawing.Size(157, 20);
+            this.minMaxWerteAnzeigenToolStripMenuItem.Text = "Min / Max Werte anzeigen";
+            this.minMaxWerteAnzeigenToolStripMenuItem.Click += new System.EventHandler(this.minMaxWerteAnzeigenToolStripMenuItem_Click);
+            // 
             // hilfeToolStripMenuItem
             // 
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
@@ -116,11 +127,18 @@
             this.hilfeToolStripMenuItem.Text = "Hilfe";
             this.hilfeToolStripMenuItem.Click += new System.EventHandler(this.hilfeToolStripMenuItem_Click);
             // 
+            // hDurchschnittsausgabeToolStripMenuItem
+            // 
+            this.hDurchschnittsausgabeToolStripMenuItem.Name = "hDurchschnittsausgabeToolStripMenuItem";
+            this.hDurchschnittsausgabeToolStripMenuItem.Size = new System.Drawing.Size(166, 20);
+            this.hDurchschnittsausgabeToolStripMenuItem.Text = "1/4 h Durchschnittsausgabe";
+            this.hDurchschnittsausgabeToolStripMenuItem.Click += new System.EventHandler(this.hDurchschnittsausgabeToolStripMenuItem_Click);
+            // 
             // frMAG8000
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 762);
+            this.ClientSize = new System.Drawing.Size(1406, 863);
             this.Controls.Add(this.ctMAG8000);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -143,6 +161,8 @@
         private System.Windows.Forms.ToolStripMenuItem chartZurücksetzenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dateiLadenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem minMaxWerteAnzeigenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hDurchschnittsausgabeToolStripMenuItem;
     }
 }
 
